@@ -1,0 +1,392 @@
+endtime = load("return os.time{year=2025, month=3, day=24, hour=0,min=00, sec=00}")()
+if os.time() > endtime then
+gg.alert("sᴄʀɪᴘᴛ ᴇxᴘɪʀᴇᴅ ᴛʜɪs sᴄʀɪᴘᴛ ᴡɪʟʟ ᴀᴜᴛᴏ ᴅᴇʟᴇᴛᴇ.")
+Detector = gg.getFile():match("[^/]+$")
+os.remove(Detector)
+os.exit() 
+end
+
+function Lib() end
+function setvalue(address,flags,value) Lib('Modify address value(Address, value type, value to be modified)') local tt={} tt[1]={} tt[1].address=address tt[1].flags=flags tt[1].value=value gg.setValues(tt) end
+function setValues(address, flags, value) gg.setValues({[1] = {address = address, flags = flags, value = value}}) end
+function setvalue(address,flags,value)
+local tt={} tt[1]={} tt[1].address=address tt[1].flags=flags tt[1].value=value gg.setValues(tt) end
+function PS() end function setvalue(address,flags,value) PS('Modify address value (address, numeric type, value to be modified)') local tt={} tt[1]={} tt[1].address=address tt[  1].flags=flags tt[1].value=value gg.setValues(tt) end
+function setValues(address, flags, value)
+gg.setValues({[1] = {address = address, flags = flags, value = value}})
+end
+
+local HexPatches = {}
+function poochwkwk(Lib,Offset,Edit,Type)
+local Ranges = gg.getRangesList(Lib)
+local v = {}
+v[1] = {}
+v[1].address = Ranges[1].start + Offset
+v[1].flags = Type
+v[1].value = Edit.."r"
+v[1].freeze = true
+gg.setValues(v)
+end
+
+running=true
+TEMPLATE=1
+function home()
+local pooch=gg.choice({
+"ʙʏᴘᴀꜱꜱ ʟᴏɢᴏ [GARENA]",
+"ʜᴀᴄᴋ ᴍᴇɴᴜ",
+"ＥＸＩＴ",
+}, nil, os.date("ᴘᴏᴏᴄʜ ʙᴇᴍʙᴀɴɢ ꜱᴏꜰᴛ ʜᴀᴄᴋ"))
+if pooch==nil then return end
+if pooch==1 then A1() end
+if pooch==2 then A2() end
+if pooch==3 then EXIT() end
+TEMPLATE=-1
+end
+
+function A1()
+graps = gg.multiChoice({
+"ʙʏᴘᴀꜱꜱ ʟᴏɢᴏ ",
+"ＥＸＩＴ"
+},nil,"ʙɪɴᴇᴍʙᴀɴɢ ʙᴀɴᴀᴍᴀɴ")
+if graps==nil then return end
+if graps == nil then
+gg.setVisible(false)
+else
+if graps[1] == true then logo() end
+if graps == nil then cancel() end
+end
+end
+
+function logo()
+poochwkwk("libanogs.so", 0x118A28, "hC0 03 5F D6 F8 5F 01 A9", 32);
+poochwkwk("libanogs.so", 0x134EF8, "hC0 03 5F D6 F8 5F 01 A9", 32);
+poochwkwk("libanogs.so", 0x217F60, "hC0 03 5F D6 FD 7B 01 A9", 32);
+poochwkwk("libanogs.so", 0x23FB08, "hC0 03 5F D6 FD 7B 0A A9", 32);
+poochwkwk("libanogs.so", 0x2B58C0, "hC0 03 5F D6 FC 83 00 F9", 32);
+poochwkwk("libanogs.so", 0x3BFCB0, "hC0 03 5F D6 F7 33 00 F9", 32);
+gg.alert("ʙʏᴘᴀꜱꜱ ʟᴏɢᴏ ᴀᴄᴛɪᴠᴀᴛᴇ")
+end
+
+function A2()
+pooch = gg.multiChoice({
+"ᴀɪᴍʙᴏᴛ",
+"ᴡᴀʟʟʜᴀᴄᴋ",
+"ᴡᴀʟʟʜᴀᴄᴋ ʀᴇᴅ ",
+"ʀᴇᴅʟɪɢʜᴛ",
+"ɴɪɢʜᴛ ᴍᴏᴅᴇ", 
+"ʜɪᴛʙᴏx",
+"ʙᴜꜰꜰ ᴅᴀᴍᴀɢᴇ",
+"ᴇxᴛᴇɴᴅ ᴡᴇᴀᴘᴏɴ ʀᴀɴɢᴇ",
+"ᴛᴀɢꜱ",
+"ꜱᴘᴇᴄᴛᴀᴛᴏʀ ᴏɴ",
+"ꜱᴘᴇᴄᴛᴀᴛᴏʀ ᴏꜰꜰ",
+"ɴᴏ ꜱᴘʀᴇᴀᴅ",
+"ɴᴏ ʀᴇʟᴏᴀᴅ",
+"ɴᴏ ʀᴇᴄᴏɪʟ",
+"ɴᴏ sᴍᴏᴋᴇ",
+"ғᴀsᴛ ᴘᴀʀᴀᴄʜᴜᴛᴇ",
+"ꜰᴀꜱᴛ ꜱᴡɪᴛᴄʜ",
+"ꜰᴀꜱᴛ ꜱɴᴏᴡʙ",
+"ʟᴏɴɢ ᴇxᴇᴄᴜᴛᴇ",
+"ᴀɴᴛɪ ғᴘs ᴅʀᴏᴘ",
+"ꜰʀᴀᴍᴇʀᴀᴛᴇ",
+"120 ꜰᴘꜱ",
+"sᴘᴇᴇᴅʜᴀᴄᴋ",
+"ʟᴏɴɢꜱʟɪᴅᴇ",
+"ɪɴғɪɴɪᴛᴇ ʟᴏɴɢ sʟɪᴅᴇ",
+"ꜱʟɪɢʜᴛ ꜱᴘᴇᴇᴅ",
+"ＥＸＩＴ"
+},nil, "😈𝗞𝗨𝗣𝗔𝗟 𝗞𝗔 𝗧𝗔𝗟𝗔𝗚𝗔 𝗣𝗢𝗢𝗖𝗛😈")
+if pooch==nil then return end
+if pooch == nil then
+gg.setVisible(false)
+else
+if pooch[1] == true then  F1() end
+if pooch[2] == true then  F2() end
+if pooch[3] == true then F3() end
+if pooch[4] == true then F4() end
+if pooch[5] == true then  F5() end
+if pooch[6] == true then  F6() end
+if pooch[7] == true then  F7() end
+if pooch[8] == true then  F8() end
+if pooch[9] == true then  F9() end
+if pooch[10] == true then  F10() end
+if pooch[11] == true then  F11() end
+if pooch[12] == true then  F12() end
+if pooch[13] == true then  F13() end
+if pooch[14] == true then F14() end
+if pooch[15] == true then F15() end
+if pooch[16] == true then  F16() end
+if pooch[17] == true then  F17() end
+if pooch[18] == true then  F18() end
+if pooch[19] == true then  F19() end
+if pooch[20] == true then  F20() end
+if pooch[21] == true then  F21() end
+if pooch[22] == true then  F22() end
+if pooch[23] == true then  F23() end
+if pooch[24] == true then  F24() end
+if pooch[25] == true then  F25() end
+if pooch[26] == true then  F26() end
+if pooch == nil then cancel() end
+end
+end
+
+function F1()
+function poochwkwk(_Type, _Flag, _Lib, _Offset, _Edit)
+local Ranges = gg["getRangesList"](_Lib)
+if Ranges and #Ranges > 0 then
+local v = {}
+v[1] = {}
+v[1].address = Ranges[1].start + _Offset
+v[1].value = _Edit
+v[1].flags = _Flag
+gg["setValues"](v)
+end
+end
+OFFSET_Aim1 = "0x846BD34"
+OFFSET_Aim2 = "0x846BD38"
+OFFSET_Aim3 = "0x846BD3C"
+OFFSET_Aim4 = "0x96F957C"
+OFFSET_Aim5 = "0x96F9580"
+OFFSET_Aim6 = "0x96F9584"
+pooch = gg.prompt({"Aimbot Setting [ 1 ~ 100000 ]"}, nil, {"number"})
+if pooch and pooch[1] then
+poochwkwk("T",4,"libunity.so",OFFSET_Aim1,"h4000001C")
+poochwkwk("T",4,"libunity.so",OFFSET_Aim2,"hC0035FD6")
+poochwkwk("T",16,"libunity.so",OFFSET_Aim3,pooch[1])
+poochwkwk("T",4,"libunity.so",OFFSET_Aim4,"h4000001C")
+poochwkwk("T",4,"libunity.so",OFFSET_Aim5,"hC0035FD6")
+poochwkwk("T",16,"libunity.so",OFFSET_Aim6,pooch[1])
+gg.toast("ᴀɪᴍʙᴏᴛ ᴀᴄᴛɪᴠᴀᴛᴇ")
+end
+end
+
+function F2()
+poochwkwk("libunity.so", 0x5b6daa8, "h1F 20 03 D5", 4);
+gg.toast("ᴡᴀʟʟʜᴀᴄᴋ ᴀᴄᴛɪᴠᴀᴛᴇ")
+end
+
+function F3()
+poochwkwk("libunity.so", 0x8497D3C, "h 20 00 80 D2 C0 03 5F D6", 32);
+gg.toast("ᴡᴀʟʟʜᴀᴄᴋ ʀᴇᴅ ᴀᴄᴛɪᴠᴀᴛᴇᴅ")
+end
+
+function F4()
+gg.setRanges(gg.REGION_C_ALLOC)
+gg.setVisible(false)
+gg.searchNumber("h 00 00 80 40 00 00 80 3F 00 00 80 3F 00 00 00 00 00 00 00 00 00 00 40 40", gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(1000, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("h 00 00 48 42 00 00 80 3F 00 00 96 43 00 00 00 00 00 00 00 00 00 00 40 40", gg.TYPE_BYTE)
+gg.clearResults()
+gg.toast("ʀᴇᴅʟɪɢʜᴛ")
+end
+
+function F5()
+gg.setRanges(gg.REGION_CODE_APP)
+gg.searchNumber("4751297607987888128;4575657222514671616;1065353216", gg.TYPE_QWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.refineNumber("1065353216", gg.TYPE_QWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+if revert ~= nil then gg.setValues(revert) end
+revert = gg.getResults(99999, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("1232348144", gg.TYPE_QWORD)
+gg.toast("ɴɪɢʜᴛ ᴍᴏᴅᴇ")
+end
+
+function F6()
+poochwkwk("libunity.so", 0x861E394, "h20 01 80 D2 C0 03 5F D6", 32); 
+gg.toast("ʜɪᴛʙᴏx ʙᴏᴅʏ: ᴀᴄᴛɪᴠᴀᴛᴇᴅ")
+end
+
+function F7()
+poochwkwk("libunity.so", 0x8650ADC, "h20 00 80 D2 C0 03 5F D6", 32);  
+gg.toast("ʙᴜғғ ᴅᴀᴍᴀɢᴇ: ᴀᴄᴛɪᴠᴀᴛᴇᴅ")
+end
+
+function F8()
+poochwkwk("libunity.so", 0x96D6444, "h20 01 80 D2 C0 03 5F D6", 32); 
+gg.toast("ᴇxᴛᴇɴᴅ ᴡᴇᴀᴘᴏɴ ʀᴀɴɢᴇ ᴀᴄᴛɪᴠᴀᴛᴇᴅ")
+end
+
+function F9()
+poochwkwk("libunity.so", 0x4C5D4B8, "h20 00 80 D2 C0 03 5F D6", 32)
+poochwkwk("libunity.so", 0x83A69FC, "h20 00 80 D2 C0 03 5F D6", 32)
+gg.toast("ʙʀ ᴛᴀɢꜱ ᴀᴄᴛɪᴠᴀᴛᴇᴅ")
+end
+
+function F10()
+poochwkwk("libunity.so", 0x701C550, "h 20 00 80 D2 C0 03 5F D6", 32);
+gg.toast("ꜱᴘᴇᴄᴛᴀᴛᴏʀ ᴏɴ")
+end
+
+function F11()
+poochwkwk("libunity.so", 0x701C550, "h F3 0F 1E F8 FD 7B 01 A9", 32);
+gg.toast("ꜱᴘᴇᴄᴛᴀᴛᴏʀ ᴏꜰꜰ")
+end
+
+function F12()
+poochwkwk("libunity.so", 0x8655FF8, "h00 00 80 D2 C0 03 5F D6", 32); 
+gg.toast("ɴᴏ ꜱᴘʀᴇᴀᴅ ᴀᴄᴛɪᴠᴀᴛᴇ")
+end
+
+function F13()
+poochwkwk("libunity.so", 0x96D4868, "h00 2C 40 BC C0 03 5F D6", 32)
+gg.toast("ɴᴏ ʀᴇʟᴏᴀᴅ ᴀᴄᴛɪᴠᴀᴛᴇᴅ")
+end
+
+function F14()
+poochwkwk("libunity.so", 0x86578E4, "h 20 4C 40 BC C0 03 5F D6", 32)
+gg.toast("ɴᴏ ʀᴇᴄᴏɪʟ ᴀᴄᴛɪᴠᴀᴛᴇᴅ")
+end
+
+function F15()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("300000045", gg.TYPE_DWORD)
+gg.refineNumber("300000045", 4)
+var = gg.getResults(9999)
+gg.editAll("0", gg.TYPE_DWORD)
+gg.clearResults()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("300000065", gg.TYPE_DWORD)
+gg.refineNumber("300000065", 4)
+var = gg.getResults(9999)
+gg.editAll("0", gg.TYPE_DWORD)
+gg.clearResults()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("300000090", gg.TYPE_DWORD)
+gg.refineNumber("300000090", 4)
+var = gg.getResults(9999)
+gg.editAll("0", gg.TYPE_DWORD)
+gg.clearResults()
+gg.toast("ɴᴏ sᴍᴏᴋᴇ ᴀᴄᴛɪᴠᴀᴛᴇᴅ")
+end
+
+function F16()
+poochwkwk("libunity.so", 0x89B471C, "h0010201EC0035FD6", 32)
+gg.toast("ғᴀsᴛ ᴘᴀʀᴀᴄʜᴜᴛᴇ")
+end
+
+function F17()
+so = gg.getRangesList('libunity.so')[1].start
+py = 0x96D51F8
+setvalue(so + py, 32, "h4000001CC0035FD6")
+so = gg.getRangesList('libunity.so')[1].start
+py = 0x96D5410
+setvalue(so + py, 32, "h4000001CC0035FD6")
+gg.toast("ꜰᴀꜱᴛ ꜱᴡɪᴛᴄʜ")
+end
+
+function F18()
+speed = gg.prompt({"sɴᴏᴡʙᴏᴀʀᴅ ʙᴏᴏsᴛ ᴀᴅᴊᴜsᴛᴀʙʟᴇ [1; 150]"}, nil, {"number"})
+if speed and speed[1] then
+so = gg.getRangesList('libunity.so')[1].start
+py = 0x5A9A074
+setValues(so + py, 32, "h4000001CC0035FD6")
+setValues(so + py + 4, 32, "hC0035FD600007A44")
+setValues(so + py + 8, 16, speed[1])
+so = gg.getRangesList('libunity.so')[1].start
+py = 0x5A9A11C
+setValues(so + py, 32, "h4000001CC0035FD6")
+setValues(so + py + 4, 32, "hC0035FD600007A44")
+setValues(so + py + 8, 16, speed[1])
+gg.toast("  sɴᴏᴡʙᴏᴀʀᴅ ʙᴏᴏsᴛ : ᴀᴄᴛɪᴠᴀᴛᴇᴅ")
+gg.toast("ꜰᴀꜱᴛ ꜱɴᴏᴡʙ ᴀᴄᴛɪᴠᴀᴛᴇ")
+gg.clearResults()
+end
+end
+
+function F19()
+so = gg.getRangesList('libunity.so')[1].start
+setValues(so + 0x490569C, 32, "h000080D2C0035FD6")
+setValues(so + 0x4902398, 32, "h000080D2C0035FD6")
+setValues(so + 0x70BF564, 32, "h200080D2C0035FD6")
+gg.toast("ʟᴏɴɢ ᴇxᴇᴄᴜᴛᴇ ᴀᴄᴛɪᴠᴀᴛᴇᴅ")
+end
+
+function F20()
+so = gg.getRangesList('libunity.so')[1].start
+py = 0x8552320
+setvalue(so + py, 32, "h200080D2C0035FD6")
+so = gg.getRangesList('libunity.so')[1].start
+py = 0x8540054
+setvalue(so + py, 32, "h200080D2C0035FD6")
+gg.toast("ᴀɴᴛɪ ғᴘs ᴅʀᴏᴘ ᴀᴄᴛɪᴠᴀᴛᴇᴅ")
+end
+
+function F21()
+poochwkwk("libunity.so", 0x8540054, "h20 00 80 D2 C0 03 5F D6", 32);
+poochwkwk("libunity.so", 0x853B1F8, "hC0 03 5F D6 00 00 7A 44", 32);
+poochwkwk("libunity.so", 0x853B6BC, "h20 00 80 D2 C0 03 5F D6", 32);
+poochwkwk("libunity.so", 0x853B7CC, "hC0 03 5F D6 00 00 7A 44 C0 03 5F D6 00 00 7A 44", 32);
+poochwkwk("libunity.so", 0x853BD78, "h20 00 80 D2 C0 03 5F D6", 32);
+poochwkwk("libunity.so", 0x853C378, "hC0 03 5F D6 00 00 7A 44", 32);
+poochwkwk("libunity.so", 0x8546ED4, "h20 00 80 D2 C0 03 5F D6", 32);
+poochwkwk("libunity.so", 0x8552320, "h20 00 80 D2 C0 03 5F D6", 32);
+gg.toast("180 ꜰʀᴀᴍᴇʀᴀᴛᴇ ᴀᴄᴛɪᴠᴀᴛᴇᴅ")
+end
+
+function F22()
+so = gg.getRangesList('libunity.so')[1].start
+py = 0x853C594
+setvalue(so + py, 32, "h002480D2C0035FD6")
+gg.toast("120 ꜰᴘꜱ")
+end
+
+function F23()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("4.28000020981;3.20000004768", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.refineNumber("4.28000020981;3.20000004768", gg.TYPE_FLOAT)
+gg.getResults(999)
+gg.editAll("5", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.toast("sᴘᴇᴇᴅʜᴀᴄᴋ")
+end
+
+function F24()
+poochwkwk("libunity.so", 0x89D2A94, "h20 00 80 D2 C0 03 5F D6", 32);
+gg.toast("ʟᴏɴɢꜱʟɪᴅᴇ ᴀᴄᴛɪᴠᴀᴛᴇᴅ")
+end
+
+function F25()
+function split(szFullString, szSeparator) local nFindStartIndex = 1 local nSplitIndex = 1 local nSplitArray = {} while true do local nFindLastIndex = string.find(szFullString, szSeparator, nFindStartIndex) if not nFindLastIndex then nSplitArray[nSplitIndex] = string.sub(szFullString, nFindStartIndex, string.len(szFullString)) break end nSplitArray[nSplitIndex] = string.sub(szFullString, nFindStartIndex, nFindLastIndex - 1) nFindStartIndex = nFindLastIndex + string.len(szSeparator) nSplitIndex = nSplitIndex + 1 end return nSplitArray end function xgxc(szpy, qmxg) for x = 1, #(qmxg) do xgpy = szpy + qmxg[x]["offset"] xglx = qmxg[x]["type"] xgsz = qmxg[x]["value"] xgdj = qmxg[x]["freeze"] if xgdj == nil or xgdj == "" then gg.setValues({[1] = {address = xgpy, flags = xglx, value = xgsz}}) else gg.addListItems({[1] = {address = xgpy, flags = xglx, freeze = xgdj, value = xgsz}}) end xgsl = xgsl + 1 xgjg = true end end function xqmnb(qmnb) gg.clearResults() gg.setVisible(false) gg.setRanges(qmnb[1]["memory"]) gg.searchNumber(qmnb[3]["value"], qmnb[3]["type"]) if gg.getResultCount() == 0 then gg.toast(qmnb[2]["name"] .. " Failed") else gg.refineNumber(qmnb[3]["value"], qmnb[3]["type"]) gg.refineNumber(qmnb[3]["value"], qmnb[3]["type"]) gg.refineNumber(qmnb[3]["value"], qmnb[3]["type"]) xxx=gg.getResultCount() if gg.getResultCount() == 0 then gg.toast(qmnb[2]["name"] .. " Failed") else sl = gg.getResults(999999) sz = gg.getResultCount() xgsl = 0 if sz > 999999 then sz = 999999 end for i = 1, sz do pdsz = true for v = 4, #(qmnb) do if pdsz == true then pysz = {} pysz[1] = {} pysz[1].address = sl[i].address + qmnb[v]["offset"] pysz[1].flags = qmnb[v]["type"] szpy = gg.getValues(pysz) pdpd = qmnb[v]["lv"] .. ";" .. szpy[1].value szpd = split(pdpd, ";") tzszpd = szpd[1] pyszpd = szpd[2] if tzszpd == pyszpd then pdjg = true pdsz = true else pdjg = false pdsz = false end end end if pdjg == true then szpy = sl[i].address xgxc(szpy, qmxg) end end if xgjg == true then gg.toast(qmnb[2]["name"] .. "\nLOVEYOU BITCH"..xxx.." U are cute : " .. xgsl .. "") else gg.toast(qmnb[2]["name"] .. " Failed") end end end gg.clearResults()  end
+qmnb = {{["memory"] = 32},{["name"] = "4"}, {["value"] = 30.0, ["type"] = 16},{["lv"] = 60.0, ["offset"] = -44, ["type"] = 16}, {["lv"] = 15.0, ["offset"] = -48, ["type"] = 16},}qmxg = {{["value"] = 100, ["offset"] = -4, ["type"] = 16},}xqmnb(qmnb)
+gg.toast("ɪɴғɪɴɪᴛᴇ ʟᴏɴɢ sʟɪᴅᴇ")
+end 
+
+function F26()
+Eurix("libunity.so", 0x96FC214, "h0010201EC0035FD6", 32);
+Eurix("libunity.so", 0x8513088, "h0010201EC0035FD6", 32);
+Eurix("libunity.so", 0x85EBC24, "h0010201EC0035FD6", 32);
+gg.toast("ꜱʟɪɢʜᴛ ꜱᴘᴇᴇᴅ ᴀᴄᴛɪᴠᴀᴛᴇᴅ")
+end
+
+gg.alert("🅂🄰🄱🄴 🄽🄸 🄿🄾🄾🄲🄷 🄺🅄🄿🄰🄻 🄺🄰")
+gg.toast(" ＮＥＧＧＡ ＡＭＰＵＴＡ ")
+
+function EXIT()
+gg.alert(("☣ʟᴀᴘᴜᴋ ᴘᴏᴏᴄʜ☣"))
+    print(("⠀⢠⣶⣿⣿⣗⡢⠀⠀⠀⠀⠀⠀⢤⣒⣿⣿⣷⣆⠀⠀"))
+    print(("⠀⠋⠉⠉⠙⠻⣿⣷⡄⠀⠀⠀⣴⣿⠿⠛⠉⠉⠉⠃⠀"))
+    print(("⠀⠀⢀⡠⢤⣠⣀⡹⡄⠀⠀⠀⡞⣁⣤⣠⠤⡀⠀⠀⠀"))
+    print(("⢐⡤⢾⣿⣿⢿⣿⡿⠀⠀⠀⠀⠸⣿⣿⢿⣿⣾⠦⣌⠀"))
+    print(("⠁⠀⠀⠀⠉⠈⠀⠀⣸⠀⠀⢰⡀⠀⠈⠈⠀⠀⠀⠀⠁"))
+    print(("⠀⠀⠀⠀⠀⠀⣀⡔⢹⠀⠀⢸⠳⡄⡀⠀⠀⠀⠀⠀⠀"))
+    print(("⠸⡦⣤⠤⠒⠋⠘⢠⡸⣀⣀⡸⣠⠘⠉⠓⠠⣤⢤⡞⠀"))
+    print(("⠀⢹⡜⢷⣄⠀⣀⣀⣾⡶⢶⣷⣄⣀⡀⢀⣴⢏⡾⠁⠀"))
+    print(("⠀⠀⠹⡮⡛⠛⠛⠻⠿⠥⠤⠽⠿⠛⠛⠛⣣⡾⠁⠀⠀"))
+    print(("⠀⠀⠀⠙⢄⠁⠀⠀⠀⣄⣀⡄⠀⠀⠀⢁⠞⠀⠀⠀⠀"))
+    print(("⠀⠀⠀⠀⠀⠂⠀⠀⠀⢸⣿⠀⠀⠀⠠⠂⠀⠀⠀⠀⠀"))
+    print(("⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"))
+    print(("⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"))
+    print(("ᴋᴜᴘᴀʟ ᴋᴀʙᴀ ᴘᴏᴏᴄʜ"))
+running=false
+end
+while running do
+if gg.isVisible(true) then
+TEMPLATE=1
+gg.setVisible(false)
+end
+if TEMPLATE==1 then
+home()
+TEMPLATE=-1
+end
+end
